@@ -4,6 +4,7 @@ Host *.watocluster.local
     ForwardAgent yes
     ProxyJump <YOUR_CLUSTER_USERNAME>@bastion.watonomous.ca
     # Uncomment the next two lines if your SSH private key is not at the default location (~/.ssh)
+    # (make sure to replace my private key location with your own)
     # IdentityFile /Users/rowandempster/.ssh/id_rsa
     # IdentitiesOnly yes
 
