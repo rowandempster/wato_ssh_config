@@ -1,0 +1,48 @@
+Host *.watocluster.local
+    # Paste the username you chose on https://watonomous.github.io/infra-config/onboarding-form/
+    User <YOUR_CLUSTER_USERNAME>
+    ForwardAgent yes
+    ProxyJump <YOUR_CLUSTER_USERNAME>@bastion.watonomous.ca
+    # Uncomment the next two lines if your SSH private key is not at the default location (~/.ssh)
+    # IdentityFile /Users/rowandempster/.ssh/id_rsa
+    # IdentitiesOnly yes
+
+# These are the Ubuntu VMs that you can use for development
+# You do not have to edit any of the lines below, just for information
+
+# GPU: 2x3090 (24 GB VRAM each)
+# RAM: 216 GB
+# CPU: Threadripper Pro (120 / 124 threads allocated)
+Host trpro-ubuntu1.watocluster.local
+    HostName trpro-ubuntu1.watocluster.local
+
+# GPU: 2x3090 (24 GB VRAM each)
+# RAM: 91 GB
+# CPU: Threadripper 3970X (55 / 64 threads allocated)
+Host thor-ubuntu1.watocluster.local
+    HostName thor-ubuntu1.watocluster.local
+
+# GPU: 1x1080 (8 GB VRAM) 
+# RAM: 19 GB
+# CPU: Threadripper 3970X (32 / 64 threads allocated)
+Host tr-ubuntu1.watocluster.local
+    HostName tr-ubuntu1.watocluster.local
+
+# GPU: 2x2080TI (11 GB VRAM each) 
+# RAM: 17 GB
+# CPU: i7-9700K (6 / 8 threads allocated)
+Host delta-ubuntu1.watocluster.local
+    HostName delta-ubuntu1.watocluster.local
+
+# GPU: 1x2080TI (8 GB VRAM)
+# RAM: 8 GB
+# CPU: i7-7700K (6 / 8 threads allocated)
+Host wato2-ubuntu1.watocluster.local
+    HostName wato2-ubuntu1.watocluster.local
+
+# GPU: 1x2080TI (11 GB VRAM)
+# RAM: 12 GB
+# CPU: i7-8700K (8 / 10 threads allocated)
+Host wato3-ubuntu1.watocluster.local
+    HostName wato3-ubuntu1.watocluster.local
+
